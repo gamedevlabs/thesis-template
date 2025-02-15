@@ -1,0 +1,39 @@
+\begin{document}
+
+% Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
+% (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
+\pagenumbering{alph}
+
+\input{_pages/cover}
+
+\frontmatter{}
+
+\input{_pages/title}
+\input{_pages/disclaimer}
+\input{_pages/acknowledgments}
+\input{_pages/abstract}
+
+\microtypesetup{protrusion=false}
+\tableofcontents{}
+\microtypesetup{protrusion=true}
+
+\mainmatter{}
+
+\input{setup/contents.tex}
+
+%% TODO: use list of figures/tables/listings accordingly
+\microtypesetup{protrusion=false}
+\listoffigures{}
+\listoftables{}
+\lstlistoflistings{}
+\microtypesetup{protrusion=true}
+
+\begingroup
+\setlength{\emergencystretch}{2.35em}
+\printbibliography[title={List of References}]
+\endgroup
+
+
+%% TODO: add appendix here
+
+\end{document}

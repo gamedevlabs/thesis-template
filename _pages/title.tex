@@ -1,0 +1,39 @@
+\begin{titlepage}
+  \centering
+
+  \IfFileExists{_logos/tum.pdf}{%
+    \includegraphics[height=20mm]{_logos/tum.pdf}
+  }{%
+    \vspace*{20mm}
+  }
+
+  \vspace{5mm}
+  {\huge\MakeUppercase{\getFaculty{}}}\\
+
+  \vspace{5mm}
+  {\large\MakeUppercase{\getUniversity{}}}\\
+
+  % Was 20mm before
+  \vspace{20mm}
+  {\Large \getDoctype{}}
+
+  \vspace{15mm}
+  {\huge\bfseries \getTitle{}}
+
+  \vspace{10mm}
+  {\huge\bfseries \foreignlanguage{ngerman}{\getTitleGer{}}}
+
+  % Was 15mm before
+  \vspace{15mm}
+  \begin{tabular}{l l}
+    Author:          & \getAuthor{} \\
+    Examiner:      & \getSupervisor{} \\
+    Supervisor:         & \getAdvisor{} \\
+    Submission Date: & \getSubmissionDate{} \\
+  \end{tabular}
+
+  %\IfFileExists{_logos/faculty.png}{%
+  %  \vfill{}
+  %  \includegraphics[height=20mm]{_logos/faculty.png}
+  %}{}
+\end{titlepage}
